@@ -13,6 +13,14 @@ function fuzzyMatch (driverArray, string) {
     return driverArray.filter(driver => regexp.test(driver))
 }
 
+//From solution
+// function fuzzyMatch (list, partialName) {
+//     let lengthOfName = partialName.length;
+//     return list.filter(function (driverName) {
+//       return driverName.slice(0, lengthOfName) === partialName;
+//     });
+//   }
+
 function matchName (driverArray, string) {
-return driverArray.filter(driver => driver.name === string)
+return driverArray.filter(driver => driver.name.toLowerCase() === string.toLowerCase())
 }
